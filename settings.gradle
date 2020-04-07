@@ -1,2 +1,2 @@
-include ':app', ':backend', ':killerJokes'
+include ':app', ':backend', ':killerJokes', ':jokedisplayactivity'
 rootProject.name='BuildItBigger'
