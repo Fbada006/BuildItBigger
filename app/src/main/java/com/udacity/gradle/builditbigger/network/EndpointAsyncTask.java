@@ -1,4 +1,4 @@
-package com.udacity.gradle.builditbigger;
+package com.udacity.gradle.builditbigger.network;
 
 import android.os.AsyncTask;
 
@@ -10,7 +10,7 @@ import com.udacity.gradle.builditbigger.backend.myApi.MyApi;
 
 import java.io.IOException;
 
-class EndpointAsyncTask extends AsyncTask<OnJokeLoaded, Void, String> {
+public class EndpointAsyncTask extends AsyncTask<OnJokeLoaded, Void, String> {
     private static MyApi myApiService = null;
     private OnJokeLoaded mOnJokeLoaded;
 

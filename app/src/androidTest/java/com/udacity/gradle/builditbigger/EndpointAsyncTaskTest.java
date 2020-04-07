@@ -1,5 +1,8 @@
 package com.udacity.gradle.builditbigger;
 
+import com.udacity.gradle.builditbigger.network.EndpointAsyncTask;
+import com.udacity.gradle.builditbigger.network.OnJokeLoaded;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
