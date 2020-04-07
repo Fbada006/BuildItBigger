@@ -31,26 +31,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
-    flavorDimensions "version"
-    productFlavors{
-        free{
-            dimension "version"
-            applicationIdSuffix '.free'
-            versionNameSuffix "-freemium"
-        }
-        paid{
-            dimension "version"
-            applicationIdSuffix '.paid'
-            versionNameSuffix "-premium"
-        }
-    }
 }
 
 dependencies {
     implementation project (':killerJokes')
     implementation project (':jokedisplayactivity')
-    implementation project (':backend')
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     endpointsServer project(path: ':backend', configuration: 'endpoints')
     implementation 'androidx.appcompat:appcompat:1.1.0'
