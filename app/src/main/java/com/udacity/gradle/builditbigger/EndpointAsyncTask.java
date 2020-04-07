@@ -47,5 +47,4 @@ class EndpointAsyncTask extends AsyncTask<OnJokeLoaded, Void, String> {
             mOnJokeLoaded.jokeLoaded(result);
         }
     }
-
 }
