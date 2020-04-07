@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-public class KillerJokes {
-    private List<String> jokes = new ArrayList<>(
+public final class KillerJokes {
+    private final List<String> jokes = new ArrayList<>(
             Arrays.asList("Q: What goes up and down but does not move?\n" +
                             "A: Stairs",
                     "Q: Where should a 500 pound alien go?\n" +
