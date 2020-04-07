@@ -24,6 +24,7 @@ sourceCompatibility = JavaVersion.VERSION_1_7
 targetCompatibility = JavaVersion.VERSION_1_7
 
 dependencies {
+    implementation project(':killerJokes')
     implementation 'com.google.endpoints:endpoints-framework:2.0.10'
     implementation 'javax.inject:javax.inject:1'
 
@@ -31,3 +32,16 @@ dependencies {
     implementation 'com.google.api-client:google-api-client:1.23.0'
     implementation 'com.google.http-client:google-http-client-android:1.23.0'
 }
+
+// [START model]
+appengine {  // App Engine tasks configuration
+    run {      // local (dev_appserver) configuration (standard environments only)
+        port = 8888                 // default
+    }
+
+    deploy {   // deploy configuration
+        stopPreviousVersion = true  // default - stop the current version
+        promote = true              // default - & make this the current version
+    }
+}
+// [END model]
