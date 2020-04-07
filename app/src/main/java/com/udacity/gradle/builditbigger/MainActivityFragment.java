@@ -1,13 +1,14 @@
 package com.udacity.gradle.builditbigger;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
+import com.disruption.jokedisplayactivity.JokeActivity;
 import com.disruption.killerjokes.KillerJokes;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -37,12 +38,13 @@ public class MainActivityFragment extends Fragment {
                 .build();
         MobileAds.setRequestConfiguration(requestConfiguration);
 
-        final TextView jokeText = root.findViewById(R.id.joke_text);
-
         root.findViewById(R.id.tellJoke).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                jokeText.setText(new KillerJokes().getRandomKillerJoke());
+                final String randomKillerJoke = new KillerJokes().getRandomKillerJoke();
+                Intent jokeIntent = new Intent(getActivity(), JokeActivity.class);
+                jokeIntent.putExtra(JokeActivity.RANDOM_KILLER_JOKE_KEY, randomKillerJoke);
+                startActivity(jokeIntent);
             }
         });
 
