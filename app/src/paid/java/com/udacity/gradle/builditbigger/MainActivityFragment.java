@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 
 import com.disruption.jokedisplayactivity.JokeActivity;
+import com.udacity.gradle.builditbigger.network.EndpointAsyncTask;
+import com.udacity.gradle.builditbigger.network.OnJokeLoaded;
 
 
 public class MainActivityFragment extends Fragment {
